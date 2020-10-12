@@ -1,14 +1,14 @@
-a=int(input())
-x=0
-while x==0:
-    for i in range(2, a+1):
-        b=a/i
-        c=a%i
-        if c == 0:
-            x = 1
-            print(i)
+from math import sqrt
+n = int(input())
+lst = []
+for i in range(2, n+1):
+    for j in lst:
+        if j > int((sqrt(i)) + 1):
+            lst.append(i)
             break
-        elif c == 0 and i == a:
-            x = 1
-            print(i)
+        if (i % j == 0):
             break
+    else:
+        lst.append(i)
+z = len(lst)
+print(z)
